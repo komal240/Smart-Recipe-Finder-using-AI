@@ -3,3 +3,4 @@ pydantic
 openai
 requests
 uvicorn
+gunicorn
