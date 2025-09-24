@@ -4,7 +4,6 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from database import query
 from openai import OpenAI
-import requests
 import logging
 
 app = FastAPI()
