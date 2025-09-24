@@ -12,6 +12,7 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 def query(q, params=None):
+    print(q)
     """
     Execute a SQL query safely.
     Supports parameterized queries to avoid SQL injection and special character issues.

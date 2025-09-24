@@ -26,7 +26,7 @@ async def get_ingredients(data: recipeRequest):
     ingredients = data.ingredients
 
     # Safe SELECT
-    recipes = query("SELECT * FROM recipes WHERE ingredient=%s", (ingredients,))
+    recipes = query(f"SELECT * FROM recipes WHERE ingrediant={ingredients}")
     if recipes:
      steps_from_db = recipes[0][2].split("\n")
      return JSONResponse(content={"message": "Data from DB", "recipe": steps_from_db})
