@@ -20,6 +20,10 @@ app.add_middleware(
 class recipeRequest(BaseModel):
     ingredients: str
 
+@app.get("/")
+async def home():
+    return JSONResponse(content={"message": "Working Fine"})
+
 
 @app.post("/generate")
 async def get_ingredients(data: recipeRequest):
